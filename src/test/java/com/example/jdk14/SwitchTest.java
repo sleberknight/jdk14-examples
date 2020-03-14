@@ -53,7 +53,7 @@ class SwitchTest {
             default -> stringBuilder.append("Unknown Event! ");
         }
 
-        assertThat(stringBuilder).contains("Play ");
+        assertThat(stringBuilder.toString()).isEqualTo("Play ");
     }
 
     // NOTE:
@@ -90,6 +90,6 @@ class SwitchTest {
                 stringBuilder.append("Unknown Event! ");
         }
 
-        assertThat(stringBuilder).contains("Play Stop Unknown Event! ");
+        assertThat(stringBuilder.toString()).isEqualTo("Play Stop Unknown Event! ");
     }
 }
