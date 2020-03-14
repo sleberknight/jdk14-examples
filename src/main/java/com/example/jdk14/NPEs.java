@@ -1,11 +1,14 @@
 package com.example.jdk14;
 
+import lombok.Getter;
+
 /**
+ * "Helpful NPEs" example that uses field access.
+ * <p>
  * Example usage:
  * <p>
  * java -XX:+ShowCodeDetailsInExceptionMessages --enable-preview -classpath target/classes com.example.jdk14.NPEs
  */
-
 public class NPEs {
 
     @SuppressWarnings("squid:S106")
@@ -17,13 +20,13 @@ public class NPEs {
 }
 
 class A {
-    B b;
+    @Getter B b;
 }
 
 class B {
-    C c;
+    @Getter C c;
 }
 
 class C {
-    String str;
+    @Getter String str;
 }
